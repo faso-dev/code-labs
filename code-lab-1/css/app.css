@@ -31,7 +31,7 @@ body {
   width: calc(100% - 4px);
   left: 0;
   height: 100%;
-  border: solid 2px #1F2C48;
+  border: solid 2px #051123;
   border-radius: 60px;
 }
 .iphone_13_container .back_camera_container {
@@ -121,7 +121,7 @@ body {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #1F2C48;
+  background: #051123;
 }
 .iphone_13_container .back_camera_container .camera_captor::after {
   position: absolute;
@@ -132,7 +132,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #3F82B1;
+  background: #174D6E;
 }
 .iphone_13_container .logo_container {
   display: flex;
