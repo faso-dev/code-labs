@@ -18,4 +18,4 @@ But I couldn't, I opted for another approach which consisted in creating three d
 I leave enriched with new experiences in CSS integration at the end of this code lab. Among these experiences, we can mention the use of box-shadow, pseudo-elements, etc.
 
 ## Results
-<img height="400" width="375" alt="Iphone 13 pro max design with html, css and sass" src="/code-lab-1/screenshots/iphone-13-pro-max.png">
+<img height="400" alt="Iphone 13 pro max design with html, css and sass" src="/code-lab-1/screenshots/iphone-13-pro-max.png">
