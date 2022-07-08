@@ -1,2 +1,3 @@
 .idea
-*.mapq
+*.map
+.DS_Store
