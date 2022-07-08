@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+@font-face {
+  font-family: "Durk Wide";
+  src: url("../assets/fonts/Druk-Wide-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+body {
+  background: #060507;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1742px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+  position: relative;
+}
+
+.flag {
+  max-width: 582px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.flag img {
+  object-fit: fill;
+}
+
+.navbar {
+  max-width: 1367px;
+  width: 100%;
+  height: 127px;
+  display: flex;
+  align-items: center;
+}
+.navbar .logo, .navbar .items {
+  height: 45px;
+}
+.navbar .logo {
+  max-width: 285px;
+  width: 100%;
+  margin-right: 96px;
+}
+.navbar .logo img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.navbar .items {
+  display: flex;
+  align-items: center;
+}
+.navbar .items .items__item {
+  margin-right: 42px;
+  margin-top: 14px;
+  border-bottom: solid 1px transparent;
+  transition: border-bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.navbar .items .items__item:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  border-bottom: solid 1px #fff;
+  transition: border-bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.navbar .items .items__item .items__item__link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Durk Wide", sans-serif;
+  font-weight: 400;
+}
+
+.content {
+  position: relative;
+  display: flex;
+}
+.content .start_wraper {
+  max-width: 1389px;
+  width: 100%;
+}
+.content .start_wraper .hero_wraper {
+  display: flex;
+  position: relative;
+  max-width: 1325px;
+  width: 100%;
+  height: 700px;
+}
+.content .start_wraper .hero_wraper .hero_motor, .content .start_wraper .hero_wraper .hero_motor_wheel {
+  position: relative;
+}
+.content .start_wraper .hero_wraper .hero_motor img, .content .start_wraper .hero_wraper .hero_motor_wheel img {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.content .start_wraper .hero_wraper .hero_motor {
+  max-width: 1032px;
+  width: 1032px;
+}
+.content .start_wraper .hero_wraper .hero_motor::after {
+  content: "";
+  position: absolute;
+  left: -6%;
+  width: 100px;
+  height: 100%;
+  z-index: 100;
+  bottom: 0;
+  background: linear-gradient(to right, #060507, rgba(6, 5, 7, 0));
+}
+.content .start_wraper .hero_wraper .hero_motor::before {
+  content: "";
+  position: absolute;
+  left: -6%;
+  width: 100%;
+  height: 245px;
+  z-index: 100;
+  bottom: 0;
+  background: linear-gradient(rgba(6, 5, 7, 0.1), #060507);
+}
+.content .start_wraper .hero_wraper .hero_motor .circle {
+  max-width: 183.28px;
+  width: 100%;
+  height: 177.41px;
+  position: absolute;
+  right: 6%;
+  top: 50px;
+  z-index: 20;
+  border-radius: 50%;
+}
+.content .start_wraper .hero_wraper .hero_motor .circle img {
+  border-radius: 50%;
+}
+.content .start_wraper .hero_wraper .hero_motor .moto_wraper {
+  background: #C4C4C4;
+  height: 100%;
+}
+.content .start_wraper .hero_wraper .hero_motor img {
+  left: -6%;
+}
+.content .start_wraper .hero_wraper .hero_motor .bg {
+  position: relative;
+  height: 100%;
+}
+.content .start_wraper .hero_wraper .hero_motor .bg::after {
+  content: "";
+  position: absolute;
+  right: 5.5%;
+  width: 100px;
+  height: 100%;
+  z-index: 10;
+  bottom: 0;
+  background: linear-gradient(to left, #060507, rgba(6, 5, 7, 0));
+}
+.content .start_wraper .hero_wraper .hero_motor .bg::before {
+  content: "";
+  position: absolute;
+  left: -6%;
+  width: 100%;
+  height: 200px;
+  z-index: 100;
+  bottom: 0;
+  background: linear-gradient(rgba(6, 5, 7, 0.1), #060507);
+}
+.content .start_wraper .hero_wraper .hero_motor_wheel {
+  max-width: 316px;
+  width: 100%;
+}
+.content .start_wraper .hero_wraper .hero_motor_wheel img {
+  right: 0;
+  z-index: 2;
+}
+.content .start_wraper .glyph_wraper {
+  position: relative;
+  height: 150px;
+}
+.content .start_wraper .glyph_wraper .glyph {
+  background: url("../assets/glyph.png") no-repeat left, url("../assets/glyph.png") right -62% top no-repeat;
+  position: absolute;
+  left: -6%;
+  right: 0;
+  top: 0;
+  height: 155px;
+  z-index: 2;
+}
+.content .start_wraper .footer_wraper {
+  display: flex;
+  align-items: center;
+  margin-top: 98px;
+  column-gap: 77px;
+  position: relative;
+}
+.content .start_wraper .footer_wraper .slide_wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 450px;
+  width: 100%;
+}
+.content .start_wraper .footer_wraper .slide_wraper .start, .content .start_wraper .footer_wraper .slide_wraper .end {
+  max-width: 72px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .start_wraper .footer_wraper .slide_wraper .start span, .content .start_wraper .footer_wraper .slide_wraper .end span {
+  font-size: 18px;
+  font-weight: 900;
+}
+.content .start_wraper .footer_wraper .slide_wraper .start::before {
+  content: "<";
+  font-weight: 900;
+}
+.content .start_wraper .footer_wraper .slide_wraper .end::after {
+  content: ">";
+  font-weight: 900;
+}
+.content .start_wraper .footer_wraper .slide_wraper .midle {
+  max-width: 226px;
+  width: 100%;
+  background: #fff;
+  height: 2px;
+}
+.content .start_wraper .footer_wraper .slide_wraper .midle .indicator {
+  display: block;
+  width: 140px;
+  background: #A75B12;
+  height: 2px;
+}
+.content .start_wraper .footer_wraper .text_content {
+  max-width: 406px;
+  width: 100%;
+  min-height: 92px;
+  font-weight: 300;
+  font-size: 12px;
+}
+.content .start_wraper .footer_wraper .motor_wheel {
+  position: absolute;
+  width: 316px;
+  height: 256px;
+  right: 0;
+  bottom: -47px;
+  background: url("../assets/bottom-motor-wheel.png") no-repeat;
+}
+.content .end_wraper {
+  max-width: 353px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  padding-top: 43px;
+  padding-left: 40px;
+  padding-right: 0;
+  margin-top: 320px;
+  height: 100vh;
+}
+.content .end_wraper .info {
+  max-width: 305px;
+  height: 148px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  display: flex;
+}
+.content .end_wraper .info .left {
+  color: #3F3E44;
+  max-width: 30px;
+  width: 100%;
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+}
+.content .end_wraper .info .left span {
+  writing-mode: sideways-lr;
+  text-orientation: sideways;
+}
+.content .end_wraper .info .right {
+  display: flex;
+  flex-flow: column;
+  row-gap: 20px;
+}
+.content .end_wraper .info .right .title, .content .end_wraper .info .right .sub_title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.content .end_wraper .info .right .data span, .content .end_wraper .info .right .sub_title span {
+  position: relative;
+  top: -6px;
+}
+.content .end_wraper .info .right .data {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Durk Wide", sans-serif;
+}
+
+.rotate {
+  animation: run 10s linear infinite;
+}
+@keyframes run {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

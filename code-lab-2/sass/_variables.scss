@@ -1,0 +1,22 @@
+@import "fonts";
+
+// BASE FONTS, BACKGROUND, COLORS, FAMILIES
+$main-background-color: #060507;
+$main-color: #fff;
+$secondary-color: #3F3E44;
+$main-font-family: 'Montserrat', sans-serif;
+$font-family-durk: "Durk Wide", sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+$max-width: 1742px;
+
+// TECHNICAL INFO FONT-SIZES
+$technical-main-info-font-size: 32px;
+$technical-secondary-info-font-size: 12px;
+$technical-labels-font-size: 18px;
+
+// NAVBAR FONT-SIZES
+$navbar-links-font-size: 14px;
+$navbar-container-maxwidth: calc(1742px - 375px);
