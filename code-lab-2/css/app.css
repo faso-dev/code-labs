@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 @font-face {
   font-family: "Durk Wide";
   src: url("../assets/fonts/Druk-Wide-Bold.ttf");
@@ -280,7 +280,7 @@ body {
   max-width: 406px;
   width: 100%;
   min-height: 92px;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 12px;
   line-height: 200%;
 }
