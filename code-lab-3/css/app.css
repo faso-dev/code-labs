@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-style: normal;
+  text-transform: initial;
+}
+
+body {
+  background: #F8F7F8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.icon {
+  font-family: "Font Awesome 5 Free";
+}
+.icon.home::after {
+  content: "\f015";
+}
+.icon.explore::after {
+  content: "\f14e";
+}
+.icon.notification::after {
+  content: "\f0f3";
+}
+.icon.message::after {
+  content: "\f0e0";
+}
+.icon.bookmark::after {
+  content: "\f02e";
+}
+.icon.list::after {
+  content: "\f0c9";
+  border: solid 2px rgb(0, 0, 0);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.logo_wraper {
+  max-width: 66px;
+  margin-top: 40px;
+  padding: 0 16px;
+}
+
+.sidebar {
+  background: #fff;
+  max-width: 375px;
+  margin: 100px auto;
+  padding: 36px;
+  border-radius: 60px;
+  height: 768px;
+}
+.sidebar .items {
+  margin-top: 32px;
+  display: flex;
+  flex-flow: column;
+}
+.sidebar .items__item {
+  border-radius: 60px;
+  padding: 0 16px;
+  max-width: min-content;
+  margin-bottom: 28px;
+}
+.sidebar .items__item:hover {
+  background: #EDF5FE;
+  cursor: pointer;
+}
+.sidebar .items__item:hover > * {
+  color: #1BA1F3;
+}
+.sidebar .items__item:hover .icon {
+  font-weight: 600;
+  transition: font-weight 0.2s ease-in-out, transform 0.2s ease-in-out;
+  animation-name: bell;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
+  animation-delay: 0.5s;
+}
+.sidebar .items__item:hover .icon.list::after {
+  border-color: #1BA1F3;
+}
+.sidebar .items__item_link {
+  font-size: 28px;
+  color: #0E1219;
+  display: flex;
+  line-height: 220%;
+  align-items: center;
+  font-weight: 600;
+}
+.sidebar .items__item_link .icon {
+  font-weight: 300;
+  margin-right: 16px;
+  transition: font-weight 0.2s ease-in-out;
+}
+.sidebar .items__item_link .icon.home, .sidebar .items__item_link .icon.list {
+  font-weight: 600;
+}
+
+@keyframes bell {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20%, 60% {
+    transform: rotate(12deg);
+  }
+  40%, 80% {
+    transform: rotate(-12deg);
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
