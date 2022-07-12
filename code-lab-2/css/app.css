@@ -104,11 +104,6 @@ body {
 .content .start_wraper .hero_wraper .hero_motor, .content .start_wraper .hero_wraper .hero_motor_wheel {
   position: relative;
 }
-.content .start_wraper .hero_wraper .hero_motor img, .content .start_wraper .hero_wraper .hero_motor_wheel img {
-  display: block;
-  position: absolute;
-  top: 0;
-}
 .content .start_wraper .hero_wraper .hero_motor_wheel {
   content: "";
   position: absolute;
@@ -143,7 +138,7 @@ body {
 }
 .content .start_wraper .hero_wraper .hero_motor {
   max-width: 1032px;
-  width: 1032px;
+  width: 100%;
 }
 .content .start_wraper .hero_wraper .hero_motor::after {
   content: "";

@@ -109,12 +109,6 @@ body {
 
       .hero_motor, .hero_motor_wheel {
         position: relative;
-
-        img {
-          display: block;
-          position: absolute;
-          top: 0;
-        }
       }
 
       .hero_motor_wheel {
@@ -153,7 +147,7 @@ body {
 
       .hero_motor {
         max-width: 1032px;
-        width: 1032px;
+        width: 100%;
 
         &::after {
           content: '';
