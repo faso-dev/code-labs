@@ -11,6 +11,7 @@
 
 body {
   background: #FFF;
+  font-family: $font-family-poppins;
 }
 
 img {
@@ -154,7 +155,7 @@ img {
       .video_link {
         display: flex;
         align-items: center;
-        max-width: 256px;
+        max-width: 290px;
         border-radius: 40px;
         height: 80px;
         font-family: $font-family-poppins;
@@ -169,16 +170,25 @@ img {
           width: 48px;
           height: 48px;
           margin-right: 13px;
-          border-radius: 50%;
+          border-radius: 100%;
           background: rgb(234, 231, 251);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          position: relative;
+          display: block;
 
           &.icon {
-            background-image: url("../assets/images/play_icon.png");
-            background-repeat: no-repeat;
-            background-position: center;
+            &::after {
+              position: absolute;
+              content: '';
+              width: 100%;
+              left: 50%;
+              top: 50%;
+              height: 100%;
+              transform: translate(-46%, -50%);
+              background-image: url("../assets/images/play_icon.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              z-index: 2;
+            }
           }
         }
       }
@@ -950,10 +960,15 @@ footer {
   gap: 10px;
   border-radius: 12px;
   border: none;
+  font-style: normal;
+  font-weight: $semi-bold;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
 
   &.primary {
     background: $blue-color;
-    color: white;
+    color: #FFFFFF;
   }
 }
 

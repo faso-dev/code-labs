@@ -10,6 +10,7 @@
 
 body {
   background: #FFF;
+  font-family: "Poppins", sans-serif;
 }
 
 img {
@@ -131,7 +132,7 @@ img {
 .hero_wraper .col_start .cta .video_link {
   display: flex;
   align-items: center;
-  max-width: 256px;
+  max-width: 290px;
   border-radius: 40px;
   height: 80px;
   font-family: "Poppins", sans-serif;
@@ -145,16 +146,23 @@ img {
   width: 48px;
   height: 48px;
   margin-right: 13px;
-  border-radius: 50%;
+  border-radius: 100%;
   background: rgb(234, 231, 251);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: block;
 }
-.hero_wraper .col_start .cta .video_link i.icon {
+.hero_wraper .col_start .cta .video_link i.icon::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  transform: translate(-46%, -50%);
   background-image: url("../assets/images/play_icon.png");
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 2;
 }
 .hero_wraper .col_end {
   position: relative;
@@ -813,10 +821,15 @@ footer.footer .bottom .copyright p {
   gap: 10px;
   border-radius: 12px;
   border: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
 }
 .btn.primary {
   background: #706FE5;
-  color: white;
+  color: #FFFFFF;
 }
 
 .pr-94 {
