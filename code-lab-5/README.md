@@ -9,12 +9,20 @@ Comming soon
 
 ## Results
 - Origine image from model
+
+- ## Desktop
+<img alt="figma model design with html, css and sass" src="/code-lab-5/screenshots/original-1.png">
+
+- ## Mobile
 <img alt="figma model design with html, css and sass" src="/code-lab-5/screenshots/original.png">
 
-- HTML, CSS & SASS
+# HTML, CSS & SASS
+
 - ## Desktop
 <img alt="figma model design with html, css and sass" src="/code-lab-5/screenshots/result-1.png">
+
 - ## Mobile 1
 <img alt="figma model design with html, css and sass" src="/code-lab-5/screenshots/result-2.png">
+
 - ## Mobile 2
 <img alt="figma model design with html, css and sass" src="/code-lab-5/screenshots/result-3.png">
