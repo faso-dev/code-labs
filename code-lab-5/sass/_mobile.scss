@@ -1,0 +1,191 @@
+@media only screen and (max-width: 991.98px) {
+  body {
+    background-image: url("../assets/images/hero_mobile.png") !important;
+
+    .nav {
+      margin-top: 34px;
+
+      .logo {
+        max-width: 219px;
+        height: 73px;
+      }
+
+      .menu_items {
+        transform-origin: top right;
+        transform: rotate(90deg);
+        display: none;
+
+        &.show {
+          display: block;
+          animation: top-right 1s ease-out both;
+        }
+
+        position: fixed;
+        height: 100vh;
+        background: linear-gradient(180deg, $secondary-color 2.6%, $main-color 100%);
+        right: 0;
+        width: 250px;
+        top: 0;
+        z-index: 10;
+        padding: 100px 16px;
+        transition: all .8s;
+
+        &__item {
+          padding: 16px 0;
+          border-bottom: solid 1px $yellow-color;
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .close_menu, .open_menu {
+        width: 42px;
+        height: 42px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .close_menu {
+        &.show {
+          display: block;
+        }
+
+        background-image: url("../assets/images/close_icon.png");
+        position: absolute;
+        z-index: 12;
+        right: 12px;
+        top: 10px;
+        transition: all .8s;
+
+        &:hover {
+          cursor: pointer;
+          transform: rotate(-90deg);
+        }
+      }
+
+      .open_menu {
+        display: block;
+        background-image: url("../assets/images/mobile_burger_menu.png");
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transition: all .8s;
+          background-image: url("../assets/images/mobile_burger_menu.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transform: translate(-100%, 100%);
+          transition: all .8s;
+          background-image: url("../assets/images/mobile_burger_menu.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+
+        &:hover::before {
+          transform: translate(100%, -100%);
+        }
+
+        &:hover::after {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transform: translate(0, 0);
+          transition: all .8s;
+        }
+
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .hero_wraper {
+      .container {
+        .d-flex {
+          flex-wrap: wrap-reverse;
+
+          .col-left {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            max-width: 100%;
+
+            .divider {
+              margin-top: 58.59px;
+              margin-bottom: 25px;
+            }
+
+            .title {
+              font-size: 60px;
+              line-height: 73px;
+              text-align: center;
+            }
+
+            .sub_title {
+              @include truncate(2);
+              font-size: 18px;
+              max-width: 322px;
+              text-align: center;
+              margin-bottom: 48px;
+            }
+
+            &::after {
+              content: none;
+            }
+          }
+
+          .col-right {
+            max-width: 100%;
+
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: 100px;
+    }
+  }
+
+}
+
+@keyframes top-right {
+  0% {
+    display: block;
+  }
+  100% {
+    transform-origin: top right;
+    transform: rotate(0deg);
+  }
+}
+
+

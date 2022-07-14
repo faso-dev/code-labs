@@ -1,0 +1,8 @@
+@mixin truncate($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
