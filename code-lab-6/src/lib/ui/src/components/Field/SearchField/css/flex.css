@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+}
+
+.items-center {
+  place-items: center;
+}
+
+.justify-center {
+  place-content: center;
+}
+
+/*# sourceMappingURL=flex.css.map */
