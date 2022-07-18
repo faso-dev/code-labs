@@ -1,0 +1,7 @@
+export const TODO_LIST = 'TODO_LIST'
+export const COMPLETED_TODO = 'COMPLETED_TODO'
+export const UNCOMPLETED_TODO = 'UNCOMPLETED_TODO'
+export const ADD_TODO = 'ADD_TODO'
+export const REMOVE_TODO = 'REMOVE_TODO'
+export const EDIT_TODO = 'EDIT_TODO'
+export const TOGGLE_TODO = 'TOGGLE_TODO'
