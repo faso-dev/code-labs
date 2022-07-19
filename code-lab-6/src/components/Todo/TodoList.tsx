@@ -7,7 +7,7 @@ export const TodoList = ({todos}: ITodoListProps) => {
             {todos.map((todo, index) => (
                 <TodoItem
                     todo={todo}
-                    key={index}
+                    key={index + 1}
                 />
             ))}
         </>

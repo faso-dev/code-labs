@@ -1,13 +1,10 @@
 import {TodoList} from "../components/Todo";
+import {useSelector} from "react-redux";
+import {todoListSelector} from "../reducers/todo/selectors";
 
 export const Home = () => {
-    const todos = Array.from(Array(10).keys()).map(index => ({
-        id: index.toString(),
-        title: 'Une tâche à faire',
-        completed: index % 2 === 0,
-        description: 'La description de ma tâche',
-        createdAt: new Date()
-    }))
+
+    const todos = useSelector(todoListSelector)
 
     return (
         <>

@@ -1,15 +1,16 @@
 import {PlusIcon} from "../lib/ui/src/components/Icon/PlusIcon";
 import {Button} from "../lib/ui/src/components/Button";
 import {SearchField} from "../lib/ui/src/components/Field/SearchField/SearchField";
-import {useState} from "react";
-import {TextField} from "../lib/ui/src/components/Field/TextField/TextField";
-import {Modal} from "../lib/ui/src/components/Modal";
-import {SaveIcon} from "../lib/ui/src/components/Icon/SaveIcon";
 import {IPageProps} from "../types/props";
 import {Navbar} from "../components/Navigation/Navbar";
+import {TodoForm} from "../components/Todo/Crud/TodoForm/TodoForm";
+import {useDispatch} from "react-redux";
+import {openModal} from "../reducers/modal/actions";
+import {AppDispatch} from "../types/todoStore";
 
 export const Page = ({children}: IPageProps) => {
-    const [open, setOpen] = useState(false)
+
+    const dispatch = useDispatch<AppDispatch>()
 
     return (
         <>
@@ -20,7 +21,9 @@ export const Page = ({children}: IPageProps) => {
                     iconHeight={'16'}
                     radius={'12px 0 0 12px'}/>
                 <Button
-                    onClick={() => setOpen(true)}
+                    onClick={() => {
+                        dispatch(openModal())
+                    }}
                     radius={'12px'}
                     variant={'primary'}
                 >
@@ -33,33 +36,7 @@ export const Page = ({children}: IPageProps) => {
                 {children}
             </div>
             <Navbar/>
-            <Modal
-                open={open}
-                onClose={() => {
-                    setOpen(false)
-                }}
-                title='Ajouter une nouvelle tâche'
-                titleColor='#0d6efd'
-                radius={'12px'}
-            >
-                <div className="mt-2">
-                    <TextField
-                        maxwidth='100%'
-                        placeholder={'Tâche...'}
-                        radius={'12px'}
-                        type='text'/>
-                </div>
-                <div className="mt-2 flex content-end">
-                    <Button
-                        radius={'12px'}
-                        variant={'primary'}
-                    >
-                        <SaveIcon
-                            color={'#fff'}
-                        />
-                    </Button>
-                </div>
-            </Modal>
+            <TodoForm/>
         </>
     )
 }

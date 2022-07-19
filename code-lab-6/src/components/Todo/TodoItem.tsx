@@ -2,8 +2,14 @@ import {Button} from "../../lib/ui/src/components/Button"
 import {TrashIcon} from "../../lib/ui/src/components/Icon/TrashIcon";
 import {EditIcon} from "../../lib/ui/src/components/Icon/EditIcon";
 import {ITodoProps} from "../../types/props";
+import {useDispatch} from "react-redux";
+import {AppDispatch} from "../../types/todoStore";
+import {removeTodoAction, setCurrentEditTodo} from "../../reducers/todo/actions";
+import {openModal} from "../../reducers/modal/actions";
 
 export const TodoItem = ({todo}: ITodoProps) => {
+    const dispatch = useDispatch<AppDispatch>()
+
     return (
         <>
             <div className={`todo ${todo.completed ? 'success' : ''}`}>
@@ -24,6 +30,10 @@ export const TodoItem = ({todo}: ITodoProps) => {
                     {!todo.completed && (
                         <div className="flex content-end gap-2">
                             <Button
+                                onClick={() => {
+                                    dispatch(setCurrentEditTodo(todo))
+                                    dispatch(openModal())
+                                }}
                                 style={{
                                     padding: '5px 10px',
                                     width: 'max-content',
@@ -34,6 +44,11 @@ export const TodoItem = ({todo}: ITodoProps) => {
                                 <EditIcon color={'#fff'}/>
                             </Button>
                             <Button
+                                onClick={() => {
+                                    if (window.confirm('Are u sure to perform this action ?')) {
+                                        dispatch(removeTodoAction(todo.id))
+                                    }
+                                }}
                                 style={{
                                     padding: '5px 10px',
                                     width: 'max-content',
