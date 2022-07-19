@@ -7,6 +7,7 @@ export const Navbar = () => {
             <BottomNavBar>
                 {Object.entries(Routes).map(([_, route], index) => (
                     <BottomNavBarItem
+                        key={route.path}
                         icon={route.icon}
                         label={route.title}
                         path={route.path}
