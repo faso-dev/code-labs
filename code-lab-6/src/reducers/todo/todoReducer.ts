@@ -1,21 +1,31 @@
-import {ITodoAction, ITodoState} from "../types/todoState";
-import {ADD_TODO, COMPLETED_TODO, EDIT_TODO, REMOVE_TODO, TOGGLE_TODO, UNCOMPLETED_TODO} from "../constants";
+import {ITodoAction, ITodoState} from "../../types/todoState";
+import {
+    ADD_TODO,
+    COMPLETED_TODO,
+    EDIT_TODO,
+    REMOVE_TODO,
+    SET_CURRENT_TODO,
+    TOGGLE_TODO,
+    UNCOMPLETED_TODO
+} from "../../constants";
 
 
 export const initialTodosState: ITodoState = {
-    todos: []
+    todos: [],
+    currentEditTodo: null
 }
 
 const TodoReducer = (state = initialTodosState, action: ITodoAction<string, any>) => {
     switch (action.type) {
         case COMPLETED_TODO:
-            return {todos: state.todos.filter(todo => todo.completed)}
+            return {...state, todos: state.todos.filter(todo => todo.completed)}
         case UNCOMPLETED_TODO:
-            return {todos: state.todos.filter(todo => !todo.completed)}
+            return {...state, todos: state.todos.filter(todo => !todo.completed)}
         case ADD_TODO:
-            return {todos: [action.payload, ...state.todos]}
+            return {...state, todos: [action.payload, ...state.todos]}
         case EDIT_TODO:
             return {
+                ...state,
                 todos: state.todos.map(todo => {
                     if (todo.id === action.payload.id) {
                         return {...todo, ...action.payload}
@@ -25,6 +35,7 @@ const TodoReducer = (state = initialTodosState, action: ITodoAction<string, any>
             }
         case TOGGLE_TODO:
             return {
+                ...state,
                 todos: state.todos.map(todo => {
                     if (todo.id === action.payload) {
                         return {...todo, completed: !todo.completed}
@@ -33,9 +44,11 @@ const TodoReducer = (state = initialTodosState, action: ITodoAction<string, any>
                 })
             }
         case REMOVE_TODO:
-            return {todos: state.todos.filter(todo => todo.id !== action.payload)}
+            return {...state, todos: state.todos.filter(todo => todo.id !== action.payload)}
+        case SET_CURRENT_TODO:
+            return {...state, currentEditTodo: action.payload}
         default :
-            return {todos: state.todos}
+            return {...state, todos: state.todos}
     }
 }
 

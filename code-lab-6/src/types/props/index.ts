@@ -21,3 +21,7 @@ export interface ITodoProps {
     todo: Todo
 }
 
+export interface ITodoFormProps {
+    editTodoId?: string
+}
+
