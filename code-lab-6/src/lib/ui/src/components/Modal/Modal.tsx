@@ -1,7 +1,7 @@
 import {IModalProps} from "./types/props";
 import {Button} from "../Button";
 import {CloseIcon} from "../Icon/CloseIcon";
-import {CSSProperties} from "react";
+import {CSSProperties, useEffect} from "react";
 import './css/modal.scss'
 
 export const Modal =
@@ -17,6 +17,15 @@ export const Modal =
          beforeOnClose,
          shadow = '0 26px 40px rgba(0, 0, 0, 0.06)',
      }: IModalProps) => {
+
+        useEffect(() => {
+            if (!open) {
+                beforeOnOpen?.()
+            } else {
+                beforeOnClose?.()
+            }
+        }, [open, beforeOnClose, beforeOnOpen])
+
         return (
             <>
                 <div

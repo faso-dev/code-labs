@@ -1,18 +1,18 @@
-import {ITextFieldProps} from "./types/props";
-import './css/input.scss'
+import {ITextareaFieldProps} from "./types/props";
+import './css/textarea.scss'
 import {CSSProperties, forwardRef, LegacyRef} from "react";
 
-export const TextField =
+export const TextareaField =
     forwardRef(({
                     radius,
                     maxwidth,
                     className,
                     style,
                     ...props
-                }: ITextFieldProps, ref: LegacyRef<HTMLInputElement> | undefined) => {
+                }: ITextareaFieldProps, ref: LegacyRef<HTMLTextAreaElement> | undefined) => {
         return (
             <>
-                <input
+                <textarea
                     ref={ref}
                     className={className}
                     style={{
@@ -20,7 +20,7 @@ export const TextField =
                         '--radius': radius || 'none',
                         '--maxwidth': maxwidth || 'max-content'
                     } as CSSProperties}
-                    {...props}/>
+                    {...props}></textarea>
             </>
         )
     })
