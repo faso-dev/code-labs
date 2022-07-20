@@ -9,6 +9,8 @@ export const SearchField =
          iconColor,
          iconWidth,
          iconHeight,
+         onSearch,
+         onType,
          buttonVariant = 'primary',
          buttonOutlined = false,
          buttonRadius = '0 12px 12px 0',
@@ -18,10 +20,12 @@ export const SearchField =
             <>
                 <div className="flex items-center">
                     <TextField
+                        onKeyUp={e => onType(e.currentTarget.value)}
                         placeholder={'Rechercher...'}
                         radius={radius}
                         type='text'/>
                     <Button
+                        onClick={onSearch}
                         outlined={buttonOutlined}
                         radius={buttonRadius}
                         variant={buttonVariant}>

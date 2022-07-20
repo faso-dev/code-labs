@@ -4,7 +4,9 @@ import {RootState} from "../types/todoStore";
 import {todoListSelector} from "../reducers/todo/selectors";
 
 export const CompletedTodo = () => {
+
     const todos = useSelector((state: RootState) => todoListSelector(state, 'completed'))
+
     return (
         <>
             <h4 className='text-primary mb-2'>

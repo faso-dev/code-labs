@@ -6,4 +6,6 @@ export interface SearchFieldProps {
     buttonVariant?: string,
     buttonOutlined?: boolean,
     buttonRadius?: string,
+    onType: (...args: any) => void
+    onSearch: () => void
 }

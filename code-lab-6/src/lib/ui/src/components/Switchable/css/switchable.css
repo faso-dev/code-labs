@@ -1,0 +1,52 @@
+input[type=checkbox] {
+  visibility: hidden;
+}
+input[type=checkbox]:checked + label {
+  background-color: var(--switched-color);
+}
+input[type=checkbox]:checked + label:before {
+  transform: translateX(calc(var(--max-width) / 2));
+  background-color: var(--switched-bullet-color);
+}
+
+label {
+  display: flex;
+  width: var(--max-width);
+  height: 28px;
+  border: 3px solid var(--border-color);
+  border-radius: 99em;
+  position: relative;
+  transition: transform 0.75s ease-in-out;
+  transform-origin: 50% 50%;
+  cursor: pointer;
+  background: var(--background-color);
+}
+label:before {
+  transition: transform 0.75s ease;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--switched-color);
+  border-radius: 50%;
+  top: 1px;
+  left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  align-content: center;
+}
+
+.content-end {
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+/*# sourceMappingURL=switchable.css.map */
