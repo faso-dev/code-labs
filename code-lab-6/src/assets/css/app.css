@@ -105,17 +105,23 @@
   box-shadow: rgba(240, 46, 170, 0.4) 0 5px, rgba(240, 46, 170, 0.3) 0 10px, rgba(240, 46, 170, 0.2) 0 15px, rgba(240, 46, 170, 0.1) 0 20px, rgba(240, 46, 170, 0.05) 0 25px;
   transition: all 0.6s;
   animation: revealingIn 3s cubic-bezier(0.16, 1, 0.3, 1) forwards, revealingOut 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border-left: solid 3px #dc3545;
 }
 .todo:hover {
   color: #0d6efd;
   background: rgb(234, 231, 251);
 }
 .todo.success {
-  background: #198754;
+  border-left: solid 3px #0d6efd;
+  background: #fff;
   position: relative;
+  color: #0d6efd;
+  text-line-through: single;
+  text-line-through-color: #fff;
+  text-decoration: line-through;
 }
 .todo.success .text-muted {
-  color: #f8f9fa;
+  color: #0d6efd;
 }
 .todo.success::after, .todo.success::before {
   position: absolute;
@@ -128,20 +134,13 @@
   align-items: center;
   border-radius: 12px;
 }
-.todo.success::after {
-  content: "DONE";
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 0;
-  opacity: 0.7;
-}
 .todo.success::before {
   content: "";
-  background: #198754;
-  opacity: 0.9;
+  background: #fff;
+  z-index: -1;
 }
 .todo.success, .todo.success .title * {
-  color: #fff;
+  color: #0d6efd;
 }
 
 @keyframes animate {

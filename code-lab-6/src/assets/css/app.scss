@@ -106,6 +106,7 @@
   transition: all .6s;
   animation: revealingIn 3s cubic-bezier(0.16, 1, 0.3, 1) forwards,
   revealingOut 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border-left: solid 3px #dc3545;
 
   &:hover {
     color: #0d6efd;
@@ -113,11 +114,17 @@
   }
 
   &.success {
-    background: #198754;
+    border-left: solid 3px #0d6efd;
+    background: #fff;
     position: relative;
+    color: #0d6efd;
+    text-line-through: single;
+    text-line-through-color: #fff;
+    text-decoration: line-through;
+
 
     .text-muted {
-      color: #f8f9fa;
+      color: #0d6efd;
     }
 
     &::after, &::before {
@@ -132,22 +139,15 @@
       border-radius: 12px;
     }
 
-    &::after {
-      content: "DONE";
-      font-size: 1.5rem;
-      font-weight: 900;
-      line-height: 0;
-      opacity: .7;
-    }
 
     &::before {
       content: "";
-      background: #198754;
-      opacity: .9;
+      background: #fff;
+      z-index: -1;
     }
 
     &, .title * {
-      color: #fff;
+      color: #0d6efd;
     }
   }
 }

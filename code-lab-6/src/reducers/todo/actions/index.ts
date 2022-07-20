@@ -1,5 +1,5 @@
 import {Todo} from "../../../types/entities/todo";
-import {ADD_TODO, EDIT_TODO, REMOVE_TODO, SET_CURRENT_TODO, TOGGLE_TODO} from "../../../constants";
+import {ADD_TODO, EDIT_TODO, REMOVE_TODO, SET_CURRENT_TODO, TOGGLE_TODO, UPDATE_SEARCH_PARAM} from "../../../constants";
 
 
 export const addTodoAction = (todo: Partial<Todo>) => ({
@@ -30,4 +30,9 @@ export const toggleTodoAction = (id: string) => ({
 export const removeTodoAction = (id: string) => ({
     type: REMOVE_TODO,
     payload: id
+})
+
+export const performSearch = (q: string | null) => ({
+    type: UPDATE_SEARCH_PARAM,
+    payload: q
 })

@@ -6,13 +6,14 @@ import {
     REMOVE_TODO,
     SET_CURRENT_TODO,
     TOGGLE_TODO,
-    UNCOMPLETED_TODO
+    UNCOMPLETED_TODO, UPDATE_SEARCH_PARAM
 } from "../../constants";
 
 
 export const initialTodosState: ITodoState = {
     todos: [],
-    currentEditTodo: null
+    currentEditTodo: null,
+    search: null
 }
 
 const TodoReducer = (state = initialTodosState, action: ITodoAction<string, any>) => {
@@ -47,6 +48,8 @@ const TodoReducer = (state = initialTodosState, action: ITodoAction<string, any>
             return {...state, todos: state.todos.filter(todo => todo.id !== action.payload)}
         case SET_CURRENT_TODO:
             return {...state, currentEditTodo: action.payload}
+        case UPDATE_SEARCH_PARAM:
+            return {...state, search: action.payload}
         default :
             return {...state, todos: state.todos}
     }
